@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="min-h-screen">
+   <h1 class="text-5xl font-bold text-center">Користувачі</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+        {% for user in users %}
+            <div class="card shadow-lg bg-base-200">
+                <div class="card-body">
+                    <h2 class="card-title">{{ user.name }}</h2>
+                    <p class="card-subtitle">Code: {{ user.authorisation_code }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+                
+{% endblock %}
